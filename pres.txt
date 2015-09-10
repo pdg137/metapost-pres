@@ -1,0 +1,42 @@
+Meta-functional-programming with MetaPost / Metafont
+====================================================
+
+History
+ - Metafont developed by Donald Knuth for TeX
+ - Released (in a state similar to what it is now) in 1984
+ - TrueType vs. MetaFont - quadratic vs. cubic splines
+ - MetaPost - derived from Metafont
+ - Asymptote - new software, missing the feature I want to talk about
+   today.
+
+Drawing with programs
+ - Specify key points parametrically
+ - Use vector math: z1 = (x1, y1)
+ - Tools like fill, pens, splines, etc. to make it look nice
+
+The cool functional thing about it
+----------------------------------
+
+You don't get to redefine variables with =
+
+a = 1;
+a = a+1;  % ERROR
+a := a+1; % OK
+
+In fact, = is for equations, not assignment:
+
+% These are all equivalent:
+a = 1;
+1 = a;
+a-1 = 0;
+
+It can solve any linear equations:
+
+DEMO
+
+
+Limitations
+-----------
+
+Nonlinear equations
+But - can solve explicitly for some things like intersections.
